@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Jost:wght@400;700&family=Nunito+Sans:ital,opsz,wght@1,6..12,900&family=Oleo+Script&family=Outfit&family=Roboto&family=Rubik+Doodle+Shadow&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 50px;
+    color: white;
+    z-index: 100;
+    background-color: black;
+}
+
+.logo{
+    font-family: 'Rubik Doodle Shadow';
+    font-size: 35px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.logo:hover{
+    color: #fb3a18;
+}
+
+.links{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.links li{
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.links li a{
+    text-decoration: none;
+    color: white;
+}
+
+.links li a:hover{
+    /* color: rgb(219, 53, 116); */
+    color: #fb3a18;
+    transition: .5s ease-in-out;
+}
+
+.active{
+    color: #fb3a18 !important;
+}
+
+.menu{
+    display: flex;
+    align-items: center;    
+    display: none;
+}
+
+@media (max-width:500px){
+    .menu{
+        display: block;
+    }
+
+    .navbar{
+        padding: 8px 28px;
+    }
+
+    .links{
+        display: none;
+        flex-direction: column;
+        justify-content: initial;
+        padding-top: 200px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: black;
+    }
+
+    .logo{
+        font-size: 30px;
+    }
+}
+
+/* events */
+.event{
+  margin-top: 56px;
+  min-height: 100vh;
+  /* background-image: url(../assets/1.png); */
+  background-image: url(../assets//4.png);
+  /* background-image: url(../assets//concert2.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.event_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  gap: 2rem;
+  opacity: 0;
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+.event_heading{
+  position: relative;
+  font-size: 60px;
+  font-family: 'Rubik Doodle Shadow';
+}
+
+.event_detail{
+  position: relative;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.event_detail span{
+  font-family: 'Jost';
+  font-size: 18px;
+}
+
+.event_detail .event_desc span div{
+  font-family: 'Jost';
+}
+
+.event_desc{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.event_catogery_heading{
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.event_cards{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 3rem;
+  justify-content: space-around;
+}
+
+.card-container {
+  perspective: 1000px;
+  width: 200px;
+  height: 300px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.front img{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-image: url(../assets/1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+}
+
+.back span{
+  font-size: 16px;
+}
+
+.participation b, .participation ol li{
+  font-family: 'Jost';
+}
+
+.participation b{
+  font-size: 24px;
+}
+
+.participation ol{
+  font-size: 18px;
+}
+
+.participation ol li a{
+  color: pink;
+}
+
+@media (max-width:768px){
+  .event_container{
+    width: 85%;
+  }
+
+  .event_cards{
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width:500px){
+  .event{
+    margin-top: 50px;
+  }
+
+  .event_cards{
+    grid-template-columns: auto;
+  }
+
+  .event_heading{
+    font-size: 35px;
+  }
+
+  .event_catogery_heading{
+    font-size: 20px;
+  }
+
+  .event_detail span{
+    font-size: 16px;
+  }
+
+  .back span{
+    font-size: 14px;
+  }
+
+  .participation b{
+    font-size: 22px;
+  }
+  
+  .participation ol{
+    font-size: 16px;
+  }
+}
+
+
+
+
+/* footer */
+.footer{
+    background-color: black;
+    color: white;
+    padding-top: 2rem;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer a{
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer i{
+    font-size: 20px;
+  }
+
+  .footer_container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer_links, .footer_handles, .footer_reachus, .footer_map{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer_links_header, .footer_handles_header, .footer_reachus_header, .footer_map_header{
+    font-weight: bold;
+    /* font-size: 18px; */
+    margin-bottom: 10px;
+  }
+
+  .footer_icons{
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer_reachus{
+    width: 300px;
+  }
+
+  .footer_reachus .phone, .footer_reachus .mail, .footer_reachus .address{
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer_bottom{
+    padding:10px 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(25, 25, 25);
+  }
+
+  .footer_bottom span{
+    font-family: 'Rubik Doodle Shadow';
+    font-size: 16px;
+  }
+
+
+  @media (max-width:768px){
+    .footer{
+        font-size: 12px;
+    }
+
+    .footer_container{
+        width: 90%;
+    }
+
+    .footer_reachus{
+        width: 250px;
+    }
+
+    .footer_map .map{
+        width: 200px;
+    }
+  }
+
+  @media (max-width:500px){
+
+    .footer_container{
+        /* flex-direction: column;*/
+        padding: 0 1rem;
+        flex-wrap: wrap;
+        gap: 2rem;
+        /* align-items: center; */
+    }
+
+    .footer_map .map{
+        width: 250px;
+    }
+  }
