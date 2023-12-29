@@ -1,0 +1,877 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Jost:wght@700&family=Nunito+Sans:ital,opsz,wght@1,6..12,900&family=Oleo+Script&family=Outfit&family=Roboto&family=Rubik+Doodle+Shadow&family=Ubuntu&display=swap');
+/* NAVIGATION */
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{ */
+    /* background-color: #E6C79C; */
+    /* background-color: #F88379; */
+    /* background-color: #E9967A; */
+    /* background-color: #FAD1AF; */
+/* } */
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 50px;
+    color: white;
+    z-index: 100;
+}
+
+.active{
+    color: #fb3a18 !important;
+}
+
+.logo{
+    font-family: 'Rubik Doodle Shadow';
+    font-size: 35px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.logo:hover{
+    color: #fb3a18;
+}
+
+.links{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.links li{
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.links li a{
+    text-decoration: none;
+    color: white;
+}
+
+.links li a:hover{
+    /* color: rgb(219, 53, 116); */
+    color: #fb3a18;
+    transition: .5s ease-in-out;
+}
+
+.menu{
+    display: flex;
+    align-items: center;    
+    display: none;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+    background-image: url(assets/enlarge_20221224_081240\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.back-video {
+    position: absolute;
+    /* transform: rotate(270deg); */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* filter: blur(5px); */
+}
+
+
+.black-background {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width:500px){
+    .menu{
+        display: block;
+    }
+
+    .navbar{
+        padding: 8px 28px;
+    }
+
+    .links{
+        display: none;
+        flex-direction: column;
+        justify-content: initial;
+        padding-top: 200px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: black;
+    }
+
+    .logo{
+        font-size: 30px;
+    }
+
+    .back-video{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* HERO CONTENT */
+
+@keyframes college_intro{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    min-height: 100vh;
+    gap: 28px;
+    position: relative;
+}
+
+.college-logo{
+    width: 100%;
+    animation: college_intro 1s ease-in;
+    display: flex;
+    justify-content: space-around;
+}
+
+.college-logo img{
+    width: 100%;
+    height: 100%;
+    width: 70px;
+}
+
+.college-logo .university_logo{
+    width: 100px;
+}
+
+.intro{
+    color: white;
+    font-size: 30px;
+    width: 55%;
+    text-align: center;
+    font-family: 'Jost';
+    font-weight:bolder;
+    animation: college_intro 1s ease-in;
+    /* margin-top: 2rem; */
+}
+
+p{
+    font-size: 25px;
+    font-weight: bolder;
+    font-style: italic;
+    opacity: 0;
+    animation: opacity 0.8s ease-in;
+    color: white;
+}
+
+
+.nipun{
+    opacity: 0;
+}
+
+.nipun span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: revealText 1s forwards;
+    font-family: 'Rubik Doodle Shadow';
+    color: rgb(224, 2, 249);
+    font-size: 80px;
+    -webkit-text-stroke-width: 2px;
+}
+
+@keyframes revealText {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nipun span:nth-child(1) { animation-delay: 0.6s; }
+.nipun span:nth-child(2) { animation-delay: 0.8s; }
+.nipun span:nth-child(3) { animation-delay: 1.0s; }
+.nipun span:nth-child(4) { animation-delay: 1.2s; }
+.nipun span:nth-child(5) { animation-delay: 1.4s; }
+.nipun span:nth-child(6) { animation-delay: 1.6s; }
+.nipun span:nth-child(7) { animation-delay: 1.8s; }
+.nipun span:nth-child(8) { animation-delay: 2.0s; }
+.nipun span:nth-child(9) { animation-delay: 2.2s; }
+
+.date{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Jost';
+    opacity: 0;
+    color: white;
+}
+
+.handles{
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    /* gap: 10rem; */
+    opacity: 0;
+    color: white;
+}
+
+
+.youtube, .insta , .mail{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.youtube:hover, .insta:hover , .mail:hover{
+    transform: translateY(-2px);
+}
+
+.handles a{
+    text-decoration: none;
+    color: white;
+}
+
+.handles img{
+    width: 30px;
+}
+
+@media (max-width:1024px){
+    .hero-content{
+        gap: 15px;
+    }
+
+    .college-logo{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .intro{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:768px){
+    .hero-content{
+        gap: 10px;
+    }
+
+    .college-logo{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .intro{
+        font-size: 23px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:500px){
+    .hero-content{
+        gap: 15px;
+    }
+
+    .college-logo{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .college-logo img{
+        width: 65px;
+    }
+
+    .college-logo .university_logo{
+        width: 80px;
+    }
+    
+    .intro{
+        font-size: 20px;
+        width: 90%;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+   .nipun span{
+    font-size: 35px;
+   }
+
+   .date{
+    font-size: 18px;
+   }
+
+   .handles{
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    gap: 10px;
+   }
+
+   .youtube, .insta, .mail{
+    gap: 2px;
+   }
+
+   .handles img{
+    width: 15px;
+   }
+}
+
+/* Our college */
+.our_college{
+    /* background-image: url(assets/1.png); */
+    background-image: url(assets/2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.our_college_container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: black !important;
+    width: 85%;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.our_college_heading{
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Rubik Doodle Shadow';
+    color: brown;
+}
+
+.college_desc{
+    display: flex;
+    gap: 25px;
+}
+
+.college_images{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.college_images img{
+    width: 100%;
+    height: 100%;
+}
+
+.college_content{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.college_content .header{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.college_content span{
+    font-family: 'Ubuntu';
+    line-height: 23px;
+}
+
+@media (max-width:768px){
+    .college_desc{
+        flex-direction: column;
+    }
+
+    .college_content .header{
+        text-align: center;
+    }
+
+}
+
+@media (max-width:500px){
+    .our_college{
+        gap: 20px;
+    }
+
+    .our_college_heading{
+        font-size: 35px;
+    }
+
+    .college_content .header{
+        font-size: 18px;
+    }
+
+    .college_content span{
+        font-size: 16px;
+    }
+
+    .college_images{
+        height: 300px;
+    }
+}
+
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+/* About us */
+.about_us{
+    background-image: url(assets/concert2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+}
+
+.about_container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+.aboutus_heading{
+    font-size: 60px;
+    font-family: 'Rubik Doodle Shadow';
+    -webkit-text-stroke-width: 3px;
+    word-spacing: 8px;
+    text-align: center;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.aboutus_content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.aboutus_content img{
+    width: 150px;
+}
+
+.motto{
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    font-family: cursive;
+    text-align: center;
+    font-size: 20px;
+}
+
+.aboutus_desc{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.aboutus_desc span{
+    font-family:'Ubuntu' ;
+}
+
+.third{
+    font-weight: bold;
+}
+
+.coming_soon{
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.coming_soon video {
+    width: 100%;
+    border-radius: 20px; /* Adjust the value for the desired curve */
+    overflow: hidden;
+}
+
+.registration_link{
+    text-align: center;
+    cursor: pointer;
+    background-color: brown;
+    padding: 10px 12px;
+    font-family: 'Jost';
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.registration_link:hover{
+    opacity: 0.9;
+}
+
+.registration_link a{
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width:768px){
+
+    .aboutus_content{
+        width: 85%;
+    }
+
+    .aboutus_content img{
+        width: 120px;
+    }
+
+    .coming_soon{
+        width: 80%;
+    }
+    
+}
+
+@media (max-width:500px){
+    .aboutus_heading{
+        font-size: 35px;
+    }
+
+    .about_us_content{
+        width: 100%;
+        text-align: center;
+    }
+
+    /* .aboutus_content img{
+        width: 100px;
+    } */
+
+    .aboutus_desc{
+        font-size: 16px;
+    }
+
+    .coming_soon{
+        width: 100%;
+    }
+
+    .registration_link{
+        font-size: 13px;
+    }
+
+    .motto{
+        font-size: 18px;
+    }
+}
+
+/* Broucher */
+
+.brochure{
+    padding: 3rem;
+    background-image: url(assets/2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.brochure_container{
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    gap: 20px;
+}
+
+.brochure_heading{
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Rubik Doodle Shadow';
+    color: brown;
+}
+
+.brochure_desc{
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.download{
+    font-family: 'Anton';
+    font-size: 20px;
+    /* font-family: 'Jost'; */
+}
+
+.card-container {
+    perspective: 1000px;
+    width: 250px;
+    height: 350px;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+
+  .card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .front img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+  /* .front {
+    
+  } */
+
+  .front .img1{
+    width: 150px;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    background-color: brown;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Rubik Doodle Shadow';
+    font-size: 30px;
+  }
+
+  .hidden-message {
+    display: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  @media (max-width:500px){
+    .brochure{
+        padding: 3rem;
+    }
+
+    .brochure_heading{
+        font-size: 35px;
+    }
+
+    .card-inner{
+        width: 250px;
+        height: 300px;
+    }
+
+    .brochure_desc{
+        min-height: 400px;
+        gap: 10px;
+    }
+
+    .card-container {
+        height: 300px;
+    }
+  }
+
+  /* footer */
+
+  .footer{
+    background-color: black;
+    color: white;
+    padding-top: 2rem;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer a{
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer i{
+    font-size: 20px;
+  }
+
+  .footer_container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer_links, .footer_handles, .footer_reachus, .footer_map{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer_links_header, .footer_handles_header, .footer_reachus_header, .footer_map_header{
+    font-weight: bold;
+    /* font-size: 18px; */
+    margin-bottom: 10px;
+  }
+
+  .footer_icons{
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer_reachus{
+    width: 300px;
+  }
+
+  .footer_reachus .phone, .footer_reachus .mail, .footer_reachus .address{
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer_bottom{
+    padding:10px 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(25, 25, 25);
+  }
+
+  .footer_bottom span{
+    font-family: 'Rubik Doodle Shadow';
+    font-size: 16px;
+  }
+
+
+  @media (max-width:768px){
+    .footer{
+        font-size: 12px;
+    }
+
+    .footer_container{
+        width: 90%;
+    }
+
+    .footer_reachus{
+        width: 250px;
+    }
+
+    .footer_map .map{
+        width: 200px;
+    }
+  }
+
+  @media (max-width:500px){
+
+    .footer_container{
+        /* flex-direction: column;*/
+        padding: 0 1rem;
+        flex-wrap: wrap;
+        gap: 2rem;
+        /* align-items: center; */
+    }
+
+    .footer_map .map{
+        width: 250px;
+    }
+  }
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
