@@ -1,0 +1,67 @@
+[
+    {
+      "name": "Dr. Sakharam Dakhore",
+      "image": "../assets/teams/dakore_sir.jpg",
+      "position": "Cultural Committee Chairperson"
+    },
+    {
+      "name": "Mr. Piyush Rana",
+      "image": "../assets/teams/rana_sir.jpg",
+      "position": "Event Incharge"
+    },
+    {
+        "name": "Mr. Nitin Pawar",
+        "image": "../assets/teams/SCR00168.JPG",
+        "position": "University Representive"
+    },
+    {
+        "name": "Miss. Yutika Pawaskar",
+        "image": "../assets/teams/SCR00121.jpg",
+        "position": "Lady Representative"
+    },
+    {
+        "name": "Mr. Sachin Dubey",
+        "image": "../assets/teams/SCR00127.jpg",
+        "position": "Assistant University Representative"
+    },
+    {
+        "name": "Miss Shruti Jadhav",
+        "image": "../assets/teams/SCR00128.jpg",
+        "position": "Assistant Lady Representative & Management Head"
+    },
+    {
+        "name": "Mr. Hardik Patil",
+        "image": "../assets/teams/hardik.JPG",
+        "position": "Technical Head"
+    },
+    {
+        "name": "Mr. Megh Raut",
+        "image": "../assets/teams/SCR00198.jpg",
+        "position": "Media Head"
+    },
+    {
+        "name": "Mr. Chinmay Gharat",
+        "image": "../assets/teams/SCR00197.jpg",
+        "position": "Media Head"
+    },
+    {
+        "name": "Mr. Ansh Rai",
+        "image": "../assets/teams/ansh.jpg",
+        "position": "PR Head"
+    },
+    {
+        "name": "Miss Nikita Rajpurohit",
+        "image": "../assets/teams/nikita.jpg",
+        "position": "Creative Head"
+    },
+    {
+        "name": "Mr. Parag Naik",
+        "image": "../assets/teams/parag.jpg",
+        "position": "Creative Head"
+    },
+    {
+        "name": "Miss Priti Gupta",
+        "image": "../assets/teams/SCR00135.JPG",
+        "position": "Management Head"
+    }
+]
